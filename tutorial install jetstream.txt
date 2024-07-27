@@ -1,0 +1,19 @@
+https://jetstream.laravel.com/2.x/installation.html
+
+composer require laravel/jetstream
+(Jika gagal bisa jalankan kembali composer require laravel/jetstream:*)
+
+php artisan jetstream:install livewire
+
+npm install
+(setelah menjalankan npm install akan otomatis membuat direktori baru dengan nama node_modules)
+
+npm run build
+npm run dev
+(setelah menjalankan npm run build atau dev akan otomatis membuat direktori baru didalam folder public dengan nama build)
+
+php artisan vendor:publish --tag=jetstream-views
+(setelah menjalankan artisan diatas akan ada baris baru pada route web sebagai route login)
+
+(karena jetstream memiliki konfigurasi databasenya sendiri, maka kita harus menjalankan)
+php artisan migrate:refresh
